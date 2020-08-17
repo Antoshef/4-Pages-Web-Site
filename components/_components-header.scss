@@ -1,0 +1,92 @@
+@import '../settings/settings-colors';
+@import '../settings/settings-breakpoints';
+@import '../elements/elements-box-shadows';
+
+.c-header {
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100vw;
+    padding: 16px;
+    justify-content: space-between;
+    box-shadow: $shadow-2dp;
+    position: relative;
+    z-index: 2;
+
+    @include for-tablet-only {
+        padding: 16px 75px;
+    }
+
+    &__drop-down-menu--black {
+        margin-right: 16px;
+
+        @include for-tablet-landscape-up {
+            display: none;
+        }
+    }
+
+    &__drop-down-menu--orange {
+        display: none;
+
+        @include for-tablet-landscape-up {
+            display: inline-block;
+            margin-right: 16px;
+        }
+    }
+
+    &__nav {
+        flex-flow: row wrap;
+        display: none;
+        padding-left: 0;
+
+        @include for-tablet-landscape-up {
+            display: flex;
+        }
+    }
+
+    &__nav-link {
+        text-transform: uppercase;
+        color: #565656;
+        font-family: 'Lato', sans-serif;
+        font-size: 13px;
+
+        @include for-tablet-landscape-up {
+            margin-right: 16px;
+        }
+
+        @include for-desktop-up {
+            margin-right: 48px;
+        }
+
+        &:hover {
+            color: $secondary-800;
+        }
+    }
+
+    &__search {
+        display: none;
+
+        @include for-tablet-landscape-up {
+            display: inline-block;
+            margin-left: 28px;
+        }
+    }
+
+    &__search:hover {
+        cursor: pointer;
+    }
+
+    &__burger-menu {
+        margin: 0 8px;
+        cursor: pointer;
+
+        @include for-tablet-landscape-up {
+            visibility: hidden;
+        }
+
+        &--orange {
+            color: $secondary-800;
+        }
+    }
+}

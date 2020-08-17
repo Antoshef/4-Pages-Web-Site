@@ -1,0 +1,106 @@
+
+.c-top-content__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-heading {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 302px;
+        background-color: $blue-400;
+        width: 100vw;
+        padding: 0 20px;
+        position: relative;
+        z-index: 0.9;
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+    }
+
+    &-banner {
+        height: 562px;
+        min-width: 335px;
+        border-radius: 12px;
+        box-shadow: $shadow-1dp;
+        position: relative;
+        z-index: 2;
+        top: -56px;
+        display: flex;
+        flex-direction: column;
+        background-color: #ffffff;
+
+        @include for-tablet-landscape-up {
+            width: 85%;
+            display: flex;
+            flex-direction: row;
+            height: 112px;
+            top: -54px;
+            justify-content: space-around;
+        }
+
+        &-items {
+            margin-left: 24px;
+
+            @include for-tablet-landscape-up {
+                display: flex;
+                flex-direction: row;
+            }
+
+            &-single-item {
+                margin: 24px 0;
+                position: relative;
+
+                @include for-tablet-landscape-up {
+                    margin: 0;
+                    &:not(:last-child) {
+                        margin-right: 66px;
+                    }
+                }
+
+                &:not(:last-child)::before {
+                    content: '';
+                    width: 24px;
+                    height: 2px;
+                    background-color: $grey-100;
+                    bottom: -25px;
+                    left: 0;
+                    position: absolute;
+
+                    @include for-tablet-landscape-up {
+                        display: none;
+                    }
+                }
+
+                &:not(:last-child)::after {
+                    display: none;
+
+                    @include for-tablet-landscape-up {
+                        display: inline-block;
+                        content: '';
+                        background-color: $grey-100;
+                        width: 2px;
+                        height: 24px;
+                        bottom: 56px;
+                        right: -30px;
+                        position: absolute;
+                    }
+                }
+
+                img {
+                    margin-right: 24px;
+                    width: 32px;
+                    height: 32px;
+                }
+
+                span {
+                    color: $secondary-800;
+                }
+            }
+        }
+    }
+}

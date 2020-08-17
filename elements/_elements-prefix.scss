@@ -1,0 +1,32 @@
+@import url('../settings/_settings-breakpoints.scss');
+
+.row {
+    display: flex;
+    flex-flow: row;
+}
+
+.row--center {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
+}
+
+.column--center {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.none {
+    display: none;
+
+    @include for-tablet-landscape-up {
+        display: flex;
+    }
+}

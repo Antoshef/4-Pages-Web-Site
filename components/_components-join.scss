@@ -1,0 +1,55 @@
+
+.c-join {
+    background-color: $blue-300;
+    border-top: 12px solid $blue-200;
+    padding: 50px 20px 100px 20px;
+    margin-top: 100px;
+
+    &__heading {
+        color: white;
+        margin-bottom: 40px;
+
+        @include for-tablet-landscape-up {
+            text-align: center;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include for-tablet-landscape-up {
+            flex-flow: row wrap;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        input {
+            display: block;
+            margin-bottom: 36px;
+            background-color: transparent;
+            width: 100%;
+            height: 52px;
+            border-radius: 6px;
+            border: 1px solid white;
+
+            @include for-tablet-landscape-up {
+                display: inline-block;
+                width: 220px;
+                margin-right: 20px;
+            }
+
+            &::placeholder {
+                color: white;
+                padding-left: 16px;
+            }
+        }
+    }
+}

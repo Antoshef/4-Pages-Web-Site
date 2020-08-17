@@ -1,0 +1,104 @@
+@import url('../settings/_settings-colors.scss');
+
+.c-box-mid {
+    color: white;
+    text-align: center;
+    height: 110px;
+    width: 400px;
+    border-radius: 12px;
+    padding-top: 22px;
+
+    &__text {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &--dark-blue {
+        background-color: $blue-400;
+    }
+
+    &--mid-blue {
+        background-color: $blue-300;
+    }
+
+    &--dark-green {
+        background-color: $primary-300;
+    }
+
+    &--mid-green {
+        background-color: $primary-200;
+    }
+}
+
+.c-box-large {
+    color: white;
+    max-width: 600px;
+    min-height: 110px;
+    border-radius: 12px;
+    position: relative;
+
+    &__items {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+        bottom: -42px;
+        left: 0;
+        right: 0;
+    }
+
+    &__text {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    &--light-blue {
+        background-color: $blue-100;
+    }
+
+    &--light-green {
+        background-color: $primary-100;
+    }
+}
+
+.c-box-small {
+    color: white;
+    text-align: center;
+    width: 120px;
+    height: 84px;
+    border-radius: 12px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.c-box-mid__heading {
+    text-transform: uppercase;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 4px 8px;
+    margin: 0;
+    color: white;
+
+    &--yellow {
+        background-color: $secondary-500;
+    }
+
+    &--red {
+        background-color: #FF7100;
+    }
+
+    &--black {
+        background-color: #35364D;
+        margin-top: 24px;
+    }
+}

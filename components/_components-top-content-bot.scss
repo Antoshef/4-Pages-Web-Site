@@ -1,0 +1,36 @@
+
+.c-top-content__bot {
+    padding: 0 20px;
+    margin-top: 60px;
+    margin-bottom: 62px;
+
+    @include for-tablet-landscape-up {
+        display: grid;
+        grid-template-columns: 40% min-content 40%;
+        grid-template-rows: 1fr;
+        justify-content: space-around;
+    }
+
+    &-heading {
+        display: flex;
+        flex-direction: row;
+
+        h2 {
+            margin: 0;
+        }
+
+        img {
+            margin-right: 18px;
+            height: 32px;
+        }
+    }
+
+    &-text {
+
+        @include for-tablet-landscape-up {
+            margin-left: 45px;
+        }
+    }
+}
+
+    

@@ -1,0 +1,51 @@
+
+.u-text__underline {
+    text-decoration: underline;
+}
+
+.u-text--orange {
+    color: $secondary-800;
+}
+
+.u-text--teal {
+    color: $primary-300;
+}
+
+.u-custom-width {
+    width: 100px;
+}
+
+.u-hidden {
+    display: none;
+    height: 64px !important;
+    width: 24px !important;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.u-hidden__900 {
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
+
+.u-hidden__600 {
+    @media (max-width: 600px) {
+        display: none;
+    }
+}
+
+.u-hidden__460 {
+    @media (max-width: 460px) {
+        display: none;
+    }
+}
+
+.u-align-start {
+    @include for-tablet-landscape-up {
+        text-align: start !important;
+    }
+}

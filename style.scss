@@ -1,0 +1,44 @@
+
+@import './components/components-header';
+@import './components/components-button';
+@import './components/components-logo';
+@import './components/components-dots';
+@import './components/components-su-kids';
+@import './components/components-study-programs';
+@import './components/components-box';
+@import './components/components-skills';
+@import './components/components-feedback-icons';
+@import './components/components-bottom';
+@import './components/components-bottom-blog';
+@import './components/components-bottom-programming';
+@import './components/components-footer';
+@import './components/components-top-content-mid';
+@import './components/components-top-content-bot';
+@import './components/components-top-content-top';
+@import './components/components-mid-content';
+@import './components/components-bottom-content';
+@import './components/components-lecture';
+@import './components/components-images';
+@import './components/components-teachers';
+@import './components/components-join';
+@import './components/components-contact-us-top';
+@import './components/components-contact-us-mid';
+@import './components/components-contact-us-bot';
+
+@import './objects/objects-page-wrapper';
+
+@import './settings/settings-breakpoints';
+@import './settings/settings-colors';
+@import './settings/settings-typography';
+@import './settings/settings-fonts';
+@import './settings/settings-mixins';
+
+@import './elements/elements-tags';
+@import './elements/elements-prefix';
+@import './elements/elements-box-shadows';
+
+@import './generic/generic-normalize';
+
+@import './utilities/u-text';
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');

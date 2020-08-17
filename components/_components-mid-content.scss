@@ -1,0 +1,92 @@
+
+
+.c-mid-content {
+    padding: 0 20px;
+    background-color: $secondary-900;
+    position: relative;
+    display: grid;
+    grid-template-rows: min-content min-content;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+                        'mid-heading-content'
+                        'mid-classes';
+
+    @include for-tablet-landscape-up {
+        grid-template-rows: min-content 1fr;
+        grid-template-columns: 50% 30%;
+        grid-template-areas: 
+                            'mid-heading-content .'
+                            'mid-classes mid-image';
+        justify-content: space-around;
+    }
+
+    &__heading {
+        margin-top: 64px;
+        display: grid;
+        grid-area: mid-heading-content;
+        grid-template-columns: min-content 1fr;
+        grid-template-areas: 
+                            'book mid-heading'
+                            'mid-text mid-text';
+        
+        @include for-tablet-landscape-up {
+            grid-template-areas: 
+                                'book mid-heading'
+                                '. mid-text';
+        }
+
+        img {
+            grid-area: book;
+            margin-right: 16px;
+            position: relative;
+            top: 5px;
+        }
+
+        h2 {
+            grid-area: mid-heading;
+            margin: 0;
+        }
+
+        p {
+            grid-area: mid-text;
+        }
+    }
+
+    &__classes {
+        margin-bottom: 32px;
+        grid-area: mid-classes;
+
+        @include for-tablet-landscape-up {
+            margin-left: 48px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin-bottom: 16px;
+                border-radius: 6px;
+                border: none;
+                padding: 14px;
+                display: flex;
+            }
+        }
+    }
+
+    &__image {
+        max-width: 352px;
+        display: none;
+        grid-area: mid-image;
+
+        @include for-tablet-landscape-up {
+            display: inline-block;
+            margin-bottom: 42px;
+            align-self: flex-end;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,101 @@
+@import url('../settings/_settings-colors.scss');
+
+.c-study-programs {
+    padding: 0 5%;
+    width: 1fr;
+
+    &__main-arrow {
+        width: min-content;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    grid-template-areas: 'header'
+                         'main'
+                         'right'
+                         'horizontal'
+                         'footer'
+                         ;
+    justify-items: center;
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas: 
+                        "header header header"
+                        "main vertical right"
+                        "horizontal horizontal horizontal"
+                        "footer footer footer"
+                        ;
+    }
+
+    &__header {
+        text-align: start;
+        grid-area: header;
+        margin-top: 77px;
+        width: 80%;
+        margin-bottom: 64px;
+
+        h1 {
+            text-align: center;
+            color: $primary-300;
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+        }
+    }
+
+    &__main {
+        margin-top: 24px;
+        text-align: -webkit-center;
+
+        &-footer {
+            text-align: start;
+            width: 95%;
+            margin-top: 117px;
+            margin-bottom: 64px;
+        }
+
+        &--blue {
+            grid-area: main;
+        }
+
+        &--green {
+            grid-area: right;
+        }
+    }
+
+    &__design {
+        grid-area: footer;
+        width: 90vw;
+        margin: 96px 0;
+
+        &-text {
+            max-width: 90vw;
+            display: inline-block;
+
+            @include for-tablet-landscape-up {
+                max-width: 55%;
+            }
+        }
+
+        &-image {
+            max-width: 90vw;
+            display: inline-block;
+            
+            img {
+                width: 100%;
+            }
+
+            @include for-tablet-landscape-up {
+                max-width: 35%;
+            }
+        }
+    }
+}

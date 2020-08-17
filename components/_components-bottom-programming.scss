@@ -1,0 +1,68 @@
+@import url('../settings/_settings-breakpoints.scss');
+@import url('../settings/_settings-colors.scss');
+
+
+.c-bottom__programming {
+    padding: 0 5%;
+    margin-bottom: 140px;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr min-content;
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: 55% 35%;
+        grid-template-rows: 1fr;
+    }
+
+    &-content {
+        grid-row: 1 / 2;
+
+        @include for-tablet-landscape-up {
+            grid-column: 1 / 2;
+        }
+    }
+
+    &-heading {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        color: $primary-300;
+    }
+
+    p {
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    ul > li > img {
+        position: absolute;
+        top: 5px;
+        left: -35px;
+    }
+
+    &-images {
+        grid-row: 2 / 3;
+        position: relative;
+        top: 20px;
+        
+        &-item {
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        @include for-tablet-landscape-up {
+            grid-row: 1 / 2;
+            grid-column: 2 / 3;
+        }
+    }
+}

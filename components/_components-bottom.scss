@@ -1,0 +1,172 @@
+@import url('../settings/_settings-breakpoints.scss');
+@import url('../settings/_settings-colors.scss');
+
+
+.c-bottom {
+    width: 100vw;
+
+    &__prizes {
+        padding: 0 30px;
+        margin-bottom: 100px;
+        position: relative;
+        justify-items: center;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content 1fr 1fr 1fr;
+        grid-template-areas: 
+                            'prizes-heading'
+                            'prizes-left'
+                            'prizes-mid'
+                            'prizes-right';
+
+        @include for-tablet-landscape-up {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: min-content 1fr;
+            grid-template-areas: 
+                                '. prizes-heading .'
+                                'prizes-left prizes-mid prizes-right';
+        }
+        
+        h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: $primary-300;
+            grid-area: prizes-heading;
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+
+            &::after {
+                content: '';
+                height: 3px;
+                width: 96px;
+                background-color: $primary-300;
+                position: absolute;
+                top: 90px;
+            }
+
+            img {
+                height: 66px;
+                width: 110px;
+                margin-bottom: 50px;
+            }
+
+            span {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+                color: $primary-300;
+                text-align: center;
+            }
+
+            p {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: center;
+            }
+    
+            &--left {
+                grid-area: prizes-left;
+            }
+    
+            &--mid {
+                grid-area: prizes-mid;
+    
+            }
+    
+            &--right {
+                grid-area: prizes-right;
+    
+            }
+        }
+    
+        &-slider {
+            display: none;
+            position: absolute;
+            right: 15px;
+            top: 180px;
+
+            @include for-tablet-landscape-up {
+                display: inline-block !important;
+            }
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-rows: min-content 1fr min-content;
+        justify-items: center;
+        margin-bottom: 120px;
+
+        h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 44px;
+            color: $primary-300;
+            justify-self: center;
+        }
+
+        &-images {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr min-content;
+            grid-gap: 15px;
+            padding: 0 30px;
+            position: relative;
+            margin-top: 40px;
+
+            @include for-tablet-only {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr min-content;
+            }
+
+            @include for-desktop-up {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr min-content;
+            }
+
+            &-single {
+                overflow: hidden;
+                height: auto;
+                width: 270px;
+                display: inline-block;
+
+                @include for-tablet-landscape-up {
+                    width: 290px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+}
+
+.gallery-slider {
+    display: none;
+
+    @include for-desktop-up {
+        display: inline-block !important;
+        position: absolute;
+        right: 0;
+        top: 80px;
+    }
+}

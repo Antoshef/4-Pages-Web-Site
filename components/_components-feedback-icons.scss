@@ -1,0 +1,31 @@
+
+.c-skills__feedback-icon--left-top {
+    position: absolute;
+    top: 145px;
+    left: 60px;
+
+    @include for-tablet-landscape-up {
+        top: 35px;
+        left: 60px;
+    }
+}
+
+.c-skills__feedback-icon--left-bot {
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+}
+
+.c-skills__feedback-icon--right-top {
+    position: absolute;
+    top: 30px;
+    right: 30%;
+    transform: rotate(110deg);
+}
+
+.c-skills__feedback-icon--right-bot {
+    position: absolute;
+    bottom: 5px;
+    right: 100px;
+    transform: rotate(60deg);
+}
