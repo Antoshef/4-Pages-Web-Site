@@ -23,6 +23,25 @@
     justify-content: center;
 }
 
+.aligned {
+    justify-content: center;
+}
+
+.blue {
+    color: $blue-400;
+    padding-left: 30px;
+}
+
+.green {
+    color: $primary-400;
+    padding-left: 30px;
+}
+
+.violet {
+    color: $violet;
+    padding-left: 30px;
+}
+
 .none {
     display: none;
 

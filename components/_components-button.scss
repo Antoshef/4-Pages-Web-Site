@@ -51,7 +51,8 @@
 
     &__gallery {
         color: $secondary-800;
-        border-color: $secondary-800;
+        border: 1px solid $secondary-800;
+        background-color: #ffffff;
 
         @include for-desktop-up {
             justify-self: end;
@@ -73,7 +74,7 @@
 
     &__blog {
         color: #ffffff;
-        border-color: #ffffff;
+        border: 1px solid #ffffff;
         background-color: $blue-300;
         grid-area: blog-button;
         justify-self: end;

@@ -1,6 +1,10 @@
 
 .c-bottom-content {
     padding: 0 20px;
+
+    @include for-tablet-landscape-up {
+        margin-bottom: 60px;
+    }
     
     &__certificate {
         display: none;

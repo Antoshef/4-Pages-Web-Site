@@ -203,7 +203,8 @@
 
 .btn__gallery {
   color: #FF9100;
-  border-color: #FF9100;
+  border: 1px solid #FF9100;
+  background-color: #ffffff;
 }
 
 @media (min-width: 1200px) {
@@ -230,7 +231,7 @@
 
 .btn__blog {
   color: #ffffff;
-  border-color: #ffffff;
+  border: 1px solid #ffffff;
   background-color: #66B9F8;
   -ms-grid-row: 6;
   -ms-grid-column: 1;
@@ -2531,6 +2532,12 @@
   padding: 0 20px;
 }
 
+@media (min-width: 900px) {
+  .c-bottom-content {
+    margin-bottom: 60px;
+  }
+}
+
 .c-bottom-content__certificate {
   display: none;
   margin-top: 55px;
@@ -3388,6 +3395,27 @@ h4,
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.aligned {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.blue {
+  color: #44A9F8;
+  padding-left: 30px;
+}
+
+.green {
+  color: #00AF9B;
+  padding-left: 30px;
+}
+
+.violet {
+  color: #9A5DC6;
+  padding-left: 30px;
 }
 
 .none {
