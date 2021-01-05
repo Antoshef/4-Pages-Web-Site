@@ -40,6 +40,11 @@
         width: 80%;
         margin-bottom: 64px;
 
+        @include for-phone-only {
+            margin: 10px;
+            text-align: center;
+        }
+
         h1 {
             text-align: center;
             color: $primary-300;
