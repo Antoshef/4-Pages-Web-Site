@@ -150,13 +150,14 @@
   height: -moz-fit-content;
   height: fit-content;
   cursor: pointer;
-  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-align: center;
 }
 
 .btn:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
 
 .btn__contacts {
@@ -970,7 +971,7 @@
   margin-bottom: 15px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .c-study-programs {
     -ms-grid-columns: 1fr min-content 1fr;
         grid-template-columns: 1fr -webkit-min-content 1fr;
@@ -1110,6 +1111,21 @@
   bottom: -42px;
   left: 0;
   right: 0;
+}
+
+@media (max-width: 599px) {
+  .c-box-large__items {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: -webkit-min-content -webkit-min-content;
+    grid-auto-columns: min-content min-content;
+    grid-auto-rows: -webkit-min-content -webkit-min-content;
+    grid-auto-rows: min-content min-content;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
 
 .c-box-large__text {

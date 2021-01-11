@@ -4,7 +4,7 @@
     padding: 0 5%;
     width: 1fr;
 
-    &__main-arrow {
+    &__main-arrow { 
         width: min-content;
         margin: 0 auto;
         margin-top: 15px;
@@ -22,7 +22,7 @@
                          ;
     justify-items: center;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         grid-template-columns: 1fr min-content 1fr;
         grid-template-rows: min-content min-content min-content;
         grid-template-areas: 

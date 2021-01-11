@@ -1,17 +1,18 @@
 @import '../settings/settings-colors';
 @import "../settings/settings-breakpoints";
 @import url('../elements/_elements-box-shadows.scss');
-
+ 
 .btn {
     text-transform: uppercase;
     border-radius: 100px;
     display: inline-block;
     height: fit-content;
     cursor: pointer;
-    box-shadow: $shadow-4dp;
+    box-shadow: none;
+    text-align: center;
 
     &:hover {
-        box-shadow: none;
+        box-shadow: $shadow-6dp;
     }
 
     &__contacts {
