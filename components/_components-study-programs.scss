@@ -4,13 +4,6 @@
     padding: 0 5%;
     width: 1fr;
 
-    &__main-arrow { 
-        width: min-content;
-        margin: 0 auto;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content min-content min-content min-content;
@@ -21,6 +14,13 @@
                          'footer'
                          ;
     justify-items: center;
+
+    &__main-arrow { 
+        width: min-content;
+        margin: 0 auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 
     @include for-desktop-up {
         grid-template-columns: 1fr min-content 1fr;

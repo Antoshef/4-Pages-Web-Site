@@ -57,7 +57,7 @@
     justify-content: space-between;
     display: none;
 
-    @include for-tablet-landscape-up {
+    @include for-desktop-up {
         display: flex;
     }
 }

@@ -19,7 +19,7 @@
 
     @include for-tablet-only {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr min-content min-content;
         grid-template-areas: 
                             'footer-one footer-two footer-three'
                             'footer-one footer-four footer-three'
@@ -27,13 +27,13 @@
     }
 
     @include for-tablet-landscape-up {
-        grid-gap: 20px;
+        grid-gap: 0 20px;
         height: 312px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr min-content;
         grid-template-areas: 
                             'footer-image footer-one footer-two footer-three footer-four'
-                            'footer-image footer-one . footer-three copyright';
+                            'footer-image copyright copyright copyright copyright';
     }
 
     &__image {
@@ -52,6 +52,8 @@
         padding-left: 0;
         margin-bottom: 0;
         margin-top: 4px;
+        justify-self: center;
+        width: 145px;
 
         p {
             color: #ffffff;
@@ -65,10 +67,6 @@
         &--one {
             grid-area: footer-one;
             position: relative;
-
-            @include for-tablet-landscape-up {
-                margin-left: 60px;
-            }
         }
 
         &--two {
@@ -81,11 +79,10 @@
 
         &--four {
             grid-area: footer-four;
-            max-width: 177px;
 
             @include for-tablet-only {
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 max-width: max-content;
             }
         }
@@ -100,12 +97,12 @@
             grid-area: copyright;
             text-align: center;
             border-top: 1px solid $grey-600;
-            padding: 32px 0;
-            margin-top: 15px;
+            margin-top: 10px;
 
             @include for-tablet-landscape-up {
-                width: 180px;
+                align-self: center;
                 border: none;
+                margin-top: -9px;
             }
         }
 
