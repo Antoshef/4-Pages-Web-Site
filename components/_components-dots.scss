@@ -4,25 +4,12 @@
 .c-dots__banner {
     display: none;
 
-    @media (min-width: 1035px) {
-        // min-height: 163px;
-        top: -58px;
-    }
-
     @include for-tablet-landscape-up {
         min-height: 163px;
         position: absolute;
-        top: -128px;
-    }
-
-    @include for-tablet-only {
-        min-height: 320px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: absolute;
-        top: -128px;
-        right: -60px;
+        top: -31px;
+        display: block;
+        left: 200px;
     }
 
     .c-dots__single {

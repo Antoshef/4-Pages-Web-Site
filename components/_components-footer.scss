@@ -11,40 +11,29 @@
     padding-top: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: min-content min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content;
     grid-template-areas: 
                         'footer-one footer-three'
-                        'footer-half footer-four'
-                        'footer-two .'
+                        'footer-two footer-four'
                         'copyright copyright';
 
     @include for-tablet-only {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: min-content min-content min-content;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
                             'footer-one footer-two footer-three'
-                            'footer-half . footer-four'
-                            'copyright copyright copyright';
+                            'footer-one footer-four footer-three'
+                            'copyright copyright copyright'
     }
 
     @include for-tablet-landscape-up {
         grid-gap: 20px;
         height: 312px;
-        grid-template-columns: 1fr 1fr min-content max-content max-content max-content;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr min-content;
         grid-template-areas: 
-                            'footer-image footer-one footer-half footer-two footer-three footer-four'
-                            'footer-image footer-one . . footer-three copyright';
-    }
-
-    @include for-desktop-up {
-        height: 312px;
-        grid-gap: 0;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-                            'footer-image footer-one footer-half footer-two footer-three footer-four'
-                            'footer-image footer-one . . footer-three copyright';
+                            'footer-image footer-one footer-two footer-three footer-four'
+                            'footer-image footer-one . footer-three copyright';
     }
 
     &__image {
@@ -82,15 +71,6 @@
             }
         }
 
-        &--one-half {
-            margin: 0;
-            grid-area: footer-half;
-
-            @include for-tablet-landscape-up {
-                margin-top: 61px;
-            }
-        }
-
         &--two {
             grid-area: footer-two;
         }
@@ -102,6 +82,12 @@
         &--four {
             grid-area: footer-four;
             max-width: 177px;
+
+            @include for-tablet-only {
+                display: flex;
+                flex-direction: row;
+                max-width: max-content;
+            }
         }
 
         &-grey-text {

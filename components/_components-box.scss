@@ -41,6 +41,9 @@
     position: relative;
 
     &__items {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
         flex-wrap: wrap;
         justify-content: space-around;
         position: relative;
@@ -49,11 +52,9 @@
         right: 0;
 
         @include for-phone-only {
-            display: grid;
-            grid-auto-columns: min-content min-content;
-            grid-auto-rows: min-content min-content;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            display: flex;
+            flex-direction: row;
+            flex-flow: wrap;
         }
     }
 
@@ -82,6 +83,10 @@
     border-radius: 12px;
     padding: 0 10px;
     margin-bottom: 10px;
+
+    @include for-phone-only {
+        display: block;
+    }
 }
 
 .c-box-mid__heading {

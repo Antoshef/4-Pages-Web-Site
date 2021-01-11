@@ -16,9 +16,10 @@
     }
 
     &__banner {
-        @include for-phone-only {
-            max-width: 300px;
-            width: 300px;
+        max-width: 300px;
+
+        @include for-tablet-landscape-up {
+            max-width: max-content;
         }
     }
 
@@ -85,9 +86,14 @@
         border: 1px solid #ffffff;
         background-color: $blue-300;
         grid-area: blog-button;
-        justify-self: end;
+        // justify-self: center;
         margin-bottom: 100px;
         margin-top: 20px;
+
+        @include for-tablet-landscape-up {
+            align-self: center;
+            justify-self: end;
+        }
     }
 }
 

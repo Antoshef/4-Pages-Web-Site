@@ -23,7 +23,7 @@
         &--col {
             display: flex;
             flex-flow: column;
-            width: max-content;
+            width: 90%;
             text-align: center;
 
             @include for-tablet-landscape-up {
