@@ -55,6 +55,10 @@
         justify-self: center;
         width: 145px;
 
+        @include for-tablet-only {
+            width: max-content;
+        }
+
         p {
             color: #ffffff;
             font-family: 'Lato';

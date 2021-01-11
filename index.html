@@ -11,11 +11,6 @@
     <header>
         <section class="c-header">
             <section class="row--center">
-                <div class="c-header__drop-down-menu--black row--center">
-                    <a href="#">
-                        <img class="c-header__drop-down-menu--black" src="./images/drop-down-menu-black.png" alt="drop-down">
-                    </a>
-                </div>
                 <div class="c-header__drop-down-menu--orange row--center">
                     <a href="#">
                         <img class="c-header__drop-down-menu--orange" src="./images/course images/drop-down-menu-orange.png" alt="drop-down">
@@ -27,7 +22,7 @@
             </section>
             <section class="row--center">
                 <nav>
-                    <ul class="c-header__nav">
+                    <ul id="show-nav" class="c-header__nav">
                         <li>
                             <a class="c-header__nav-link" href="./index.html">training</a>
                         </li>
@@ -45,18 +40,23 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="row--center">
+                <div id="search-icon" class="row--center">
                     <label for="search">
                         <img class="c-header__search" src="./images/search.png" alt="search">
+                        <div class="c-header__search-bar">
+                            <input type="search" name="search-box" id="search" width="inherit" placeholder="search">
+                        </div>
                     </label>
                 </div>
                 <div>
                     <button class="btn btn__header btn__primary">enter</button>
                 </div>
                 <div class="c-header__burger-menu row--center">
-                    <span>
-                        <i class="fa fa-bars"></i>
-                    </span>
+                    <button class="c-header__nav-burger" onclick="burger()">
+                        <span>
+                            <i class="fa fa-bars"></i>
+                        </span>
+                    </button>
                 </div>
             </section>
         </section>
@@ -451,27 +451,32 @@
                 </div>
             </article>
             <article class="c-skills__feedback">
-                <div class="c-skills__feedback-image">
-                    <img src="./images/bilyana-deneva 1.png" alt="">
-                </div>
-                <div class="c-skills__feedback-heading">
-                    <h4>
-                        Bilyana Deneva
-                    </h4>
-                    <p>
-                        Victor's mother
-                    </p>
-                    <div class="c-skills__feedback-heading-stars">
-                        <img src="./images/star_24px.png" alt="">
-                        <img src="./images/star_24px.png" alt="">
-                        <img src="./images/star_24px.png" alt="">
-                        <img src="./images/star_24px.png" alt="">
-                        <img src="./images/star_24px.png" alt="">
+                <section class="c-skills__feedback-nav">
+                    <div class="c-skills__feedback-nav--image">
+                        <img src="./images/bilyana-deneva 1.png" alt="">
                     </div>
-                </div>
-                <div class="c-skills__feedback-text">
-                    I have been following SoftUni's initiatives from the very beginning and when I saw how much energy and enthusiasm was boiling in you and on the spot, I was convinced that your projects are actually causes, not just business, and you are a real team, not just a group of colleagues. As a game, children learn to program, work in a team and present their projects. I think that your organization with learning modules and then holding competitions is very appropriate and motivates children to put their skills into practice, giving them complete freedom in the direction of application. And every time my son is so impressed by the many students in the halls, who look both concentrated and enthusiastic at the same time, he stands at the back to listen to the lecture with them.
-                </div>
+                    <div class="c-skills__feedback-nav--heading">
+                        <h4>
+                            Bilyana Deneva
+                        </h4>
+                        <p>
+                            Victor's mother
+                        </p>
+                        <div class="c-skills__feedback-heading-nav--stars">
+                            <img src="./images/star_24px.png" alt="">
+                            <img src="./images/star_24px.png" alt="">
+                            <img src="./images/star_24px.png" alt="">
+                            <img src="./images/star_24px.png" alt="">
+                            <img src="./images/star_24px.png" alt="">
+                        </div>
+                    </div>
+                    <div class="c-skills__feedback-nav--text">
+                        I have been following SoftUni's initiatives from the very beginning and when I saw how much energy and enthusiasm was boiling in you and on the spot, I was convinced that your projects are actually causes, not just business, and you are a real team, not just a group of colleagues. As a game, children learn to program, work in a team and present their projects. I think that your organization with learning modules and then holding competitions is very appropriate and motivates children to put their skills into practice, giving them complete freedom in the direction of application. And every time my son is so impressed by the many students in the halls, who look both concentrated and enthusiastic at the same time, he stands at the back to listen to the lecture with them.
+                    </div>
+                    <div class="c-skills__feedback-nav--slider" onclick="slider()">
+                        <a style="cursor: pointer"><img src="./images/slider.png" alt=""></a>
+                    </div>
+                </section>
                 <div class="c-skills__feedback-icon--left-top">
                     <img src="./images/Ellipse 5.png" alt="">
                 </div>
@@ -483,9 +488,6 @@
                 </div>
                 <div class="c-skills__feedback-icon--right-bot">
                     <img src="./images/Ellipse 2.png" alt="">
-                </div>
-                <div class="c-skills__feedback-slider">
-                    <a href="#"><img src="./images/slider.png" alt=""></a>
                 </div>
             </article>
         </section>
@@ -855,5 +857,6 @@
             </section>
         </footer>
     </main>
+    <script src="./teachers.js"></script>
 </body>
 </html>

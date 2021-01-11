@@ -26,6 +26,12 @@
     right: 0;
 }
 
+.u-block {
+    @media (max-width: 899px) {
+        display: block;
+    }
+}
+
 .u-hidden__900 {
     @media (max-width: 900px) {
         display: none;

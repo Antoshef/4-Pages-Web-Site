@@ -101,9 +101,8 @@
         justify-items: center;
         align-items: center;
         position: relative;
-        min-height: 567px;
-        padding-top: 169px;
-        padding-bottom: 54px;
+        min-height: 500px;
+        padding: 30px 0;
 
             @include for-tablet-only {
                 display: grid;

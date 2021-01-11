@@ -139,69 +139,72 @@
         margin-top: 60px;
         background-color: $primary-300;
         position: relative;
-        display: grid;
-        grid-gap: 30px;
-        grid-template-columns: min-content 1fr min-content;
-        grid-template-rows: min-content 1fr;
-        grid-template-areas: 
-                            'feed-image feed-heading feed-slider'
-                            'feed-text feed-text feed-slider';
-        
-        @include for-tablet-landscape-up {
-            grid-template-columns: 20% 1fr min-content;
+
+        &-nav {
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: min-content 1fr min-content;
             grid-template-rows: min-content 1fr;
             grid-template-areas: 
                                 'feed-image feed-heading feed-slider'
-                                'feed-image feed-text feed-slider';
-        }
-
-        &-image {
-            border-radius: 50%;
-            width: 140px;
-            height: 140px;
-            overflow: hidden;
-            display: inline-block;
-            grid-area: feed-image;
-            align-self: center;
-            justify-self: center;
-
-        }
-
-        &-heading {
-            grid-area: feed-heading;
-            align-self: center;
-            justify-self: center;
-
+                                'feed-text feed-text feed-slider';
+            
             @include for-tablet-landscape-up {
-                justify-self: start;
+                grid-template-columns: 20% 1fr min-content;
+                grid-template-rows: min-content 1fr;
+                grid-template-areas: 
+                                    'feed-image feed-heading feed-slider'
+                                    'feed-image feed-text feed-slider';
             }
 
-            h4 {
-                font-family: 'Montserrat';
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                line-height: 25px;
-                margin: 0;
+            &--image {
+                border-radius: 50%;
+                width: 140px;
+                height: 140px;
+                overflow: hidden;
+                display: inline-block;
+                grid-area: feed-image;
+                align-self: center;
+                justify-self: center;
+    
             }
-
-            p {
-                font-family: 'Lato';
-                font-style: normal;
-                font-weight: normal;
-                font-size: 16px;
-                line-height: 20px;
-                margin: 8px 0;
+    
+            &--heading {
+                grid-area: feed-heading;
+                align-self: center;
+                justify-self: center;
+    
+                @include for-tablet-landscape-up {
+                    justify-self: start;
+                }
+    
+                h4 {
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 25px;
+                    margin: 0;
+                }
+    
+                p {
+                    font-family: 'Lato';
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin: 8px 0;
+                }
             }
-        }
-
-        &-text {
-            grid-area: feed-text;
-        }
-
-        &-slider {
-            grid-area: feed-slider;
-            align-self: center;
+    
+            &--text {
+                grid-area: feed-text;
+            }
+    
+            &--slider {
+                grid-area: feed-slider;
+                align-self: center;
+            }
         }
     }
 }
