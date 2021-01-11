@@ -15,6 +15,13 @@
         box-shadow: $shadow-6dp;
     }
 
+    &__banner {
+        @include for-phone-only {
+            max-width: 300px;
+            width: 300px;
+        }
+    }
+
     &__contacts {
         color: $secondary-800;
         border: $secondary-800 1px solid;

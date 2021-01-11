@@ -19,6 +19,7 @@
             flex-shrink: 1;
             max-width: 600px;
             text-align: center;
+            width: 85%;
         }
     }
 
@@ -29,7 +30,7 @@
         min-height: 153px;
         background-color: #ffffff;
         position: absolute;
-        bottom: -110px;
+        bottom: -140px;
         left: 0;
         right: 0;
         margin: 0 auto;
@@ -41,15 +42,20 @@
         grid-template-rows: 1fr;
         grid-template-areas: 'button items';
 
+        @include for-phone-only {
+            min-height: 100px;
+            justify-content: center;
+            bottom: -30px;
+        }
+
         @media (min-width: 1035px) {
             display: flex;
             flex-flow: row wrap;
-            bottom: -60px;
             padding-top: 0;
         }
 
         &-items {
-            display: grid;
+            display: none;
             grid-template-rows: min-content min-content min-content;
             grid-template-columns: 1fr;
             grid-template-areas: 'face'
@@ -62,6 +68,10 @@
             @media (min-width: 1035px) {
                 display: flex;
                 flex-flow: row wrap;
+            }
+
+            @include for-tablet-only {
+                display: grid;
             }
         }
 
@@ -115,6 +125,10 @@
                 justify-content: space-around;
             }
 
+            @include for-phone-only {
+                padding-top: 55px;
+            }
+
         &--text {
             color: white;
             width: 85%;
@@ -165,6 +179,10 @@
 .button {
     grid-area: button;
     margin-right: 80px;
+
+    @include for-phone-only {
+        margin-right: 0px;
+    }
 }
 
 .dots {
