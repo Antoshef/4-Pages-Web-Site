@@ -1409,9 +1409,29 @@
   margin-top: 60px;
   background-color: #41BEAD;
   position: relative;
+  overflow: hidden;
+  height: 288px;
+}
+
+.c-skills__feedback-move {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: nowrap;
+      flex-flow: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .c-skills__feedback-nav {
+  width: 100vw;
+  min-width: 100%;
+  margin: 0 40px;
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
@@ -1426,13 +1446,12 @@
 
 @media (min-width: 900px) {
   .c-skills__feedback-nav {
-    -ms-grid-columns: 20% 1fr min-content;
-        grid-template-columns: 20% 1fr -webkit-min-content;
-        grid-template-columns: 20% 1fr min-content;
+    -ms-grid-columns: 20% 1fr;
+        grid-template-columns: 20% 1fr;
     -ms-grid-rows: min-content 1fr;
         grid-template-rows: -webkit-min-content 1fr;
         grid-template-rows: min-content 1fr;
-        grid-template-areas: 'feed-image feed-heading feed-slider' 'feed-image feed-text feed-slider';
+        grid-template-areas: 'feed-image feed-heading' 'feed-image feed-text';
   }
 }
 
@@ -1459,8 +1478,6 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
 }
 
 @media (min-width: 900px) {
@@ -1495,14 +1512,33 @@
   grid-area: feed-text;
 }
 
-.c-skills__feedback-nav--slider {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
-  grid-area: feed-slider;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.c-skills__feedback-nav--text p {
+  margin: 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.c-skills__feedback-slider--left {
+  display: inline;
+  position: absolute;
+  top: 140px;
+  left: 30px;
+  cursor: pointer;
+}
+
+.c-skills__feedback-slider--left a > img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.c-skills__feedback-slider--right {
+  display: inline;
+  position: absolute;
+  top: 140px;
+  right: 30px;
+  cursor: pointer;
 }
 
 .c-skills__feedback-icon--left-top {
@@ -3790,5 +3826,9 @@ summary {
   .u-align-start {
     text-align: start !important;
   }
+}
+
+.u-nav-hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

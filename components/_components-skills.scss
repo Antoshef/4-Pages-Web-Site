@@ -139,8 +139,20 @@
         margin-top: 60px;
         background-color: $primary-300;
         position: relative;
+        overflow: hidden;
+        height: 288px;
+
+        &-move {
+            display: flex;
+            flex-direction: row;
+            flex-flow: nowrap;
+            justify-content: space-between;
+        }
 
         &-nav {
+            width: 100vw;
+            min-width: 100%;
+            margin: 0 40px;
             display: grid;
             grid-gap: 30px;
             grid-template-columns: min-content 1fr min-content;
@@ -150,11 +162,11 @@
                                 'feed-text feed-text feed-slider';
             
             @include for-tablet-landscape-up {
-                grid-template-columns: 20% 1fr min-content;
+                grid-template-columns: 20% 1fr;
                 grid-template-rows: min-content 1fr;
                 grid-template-areas: 
-                                    'feed-image feed-heading feed-slider'
-                                    'feed-image feed-text feed-slider';
+                                    'feed-image feed-heading'
+                                    'feed-image feed-text';
             }
 
             &--image {
@@ -172,7 +184,6 @@
             &--heading {
                 grid-area: feed-heading;
                 align-self: center;
-                justify-self: center;
     
                 @include for-tablet-landscape-up {
                     justify-self: start;
@@ -194,17 +205,40 @@
                     font-size: 16px;
                     line-height: 20px;
                     margin: 8px 0;
+
                 }
             }
     
             &--text {
                 grid-area: feed-text;
+
+                p {
+                    margin: 0;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
             }
-    
-            &--slider {
-                grid-area: feed-slider;
-                align-self: center;
+        }
+        &-slider--left {
+            display: inline;
+            position: absolute;
+            top: 140px;
+            left: 30px;
+            cursor: pointer;
+
+            a > img {
+                transform: rotate(180deg);
             }
+        }
+
+        &-slider--right {
+            display: inline;
+            position: absolute;
+            top: 140px;
+            right: 30px;
+            cursor: pointer;
         }
     }
 }
