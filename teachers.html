@@ -13,11 +13,6 @@
         <header>
             <section class="c-header">
                 <section class="row--center">
-                    <div class="c-header__drop-down-menu--black row--center">
-                        <a href="#">
-                            <img class="c-header__drop-down-menu--black" src="./images/drop-down-menu-black.png" alt="drop-down">
-                        </a>
-                    </div>
                     <div class="c-header__drop-down-menu--orange row--center">
                         <a href="#">
                             <img class="c-header__drop-down-menu--orange" src="./images/course images/drop-down-menu-orange.png" alt="drop-down">
@@ -29,7 +24,7 @@
                 </section>
                 <section class="row--center">
                     <nav>
-                        <ul class="c-header__nav">
+                        <ul id="show-nav" class="c-header__nav">
                             <li>
                                 <a class="c-header__nav-link" href="./index.html">training</a>
                             </li>
@@ -47,18 +42,23 @@
                             </li>
                         </ul>
                     </nav>
-                    <div class="row--center">
+                    <div id="search-icon" class="row--center">
                         <label for="search">
                             <img class="c-header__search" src="./images/search.png" alt="search">
+                            <div class="c-header__search-bar">
+                                <input type="search" name="search-box" id="search" width="inherit" placeholder="search">
+                            </div>
                         </label>
                     </div>
                     <div>
                         <button class="btn btn__header btn__primary">enter</button>
                     </div>
                     <div class="c-header__burger-menu row--center">
-                        <span>
-                            <i class="fa fa-bars"></i>
-                        </span>
+                        <button class="c-header__nav-burger" onclick="burger()">
+                            <span>
+                                <i class="fa fa-bars"></i>
+                            </span>
+                        </button>
                     </div>
                 </section>
             </section>
@@ -485,6 +485,7 @@
         </footer>
 
     </section>
+    <script src="./teachers.js"></script>
 </body>
 
 </html>
