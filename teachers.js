@@ -19,18 +19,22 @@ function burger() {
     } else {
         navElements.classList.add('u-block');
     };
+}; 
+
+function sliderLeft() {
+    let parentsFeedBack = document.getElementsByClassName('c-skills__feedback-nav');
+
+    for (let o = 0; o < parentsFeedBack.length; o++) {
+        let current = parentsFeedBack[o];
+        current.classList.add('a-slide-left');
+    }
 };
 
-// let parentsFeedBack = document.getElementsByClassName('c-skills__feedback-nav');
-// let i = 0;
-
-// function sliderLeft() {
-//     let current = parentsFeedBack[i]
-//     current.classList.add('a-slide-left');
-//     i++;
-//     if (i > 2) {i = 0};
-// };
-
 // function sliderRight() {
-    
+//     let parentsFeedBack = document.getElementsByClassName('c-skills__feedback-nav');
+
+//     for (let o = 0; o < parentsFeedBack.length; o++) {
+//         let current = parentsFeedBack[o];
+//         current.classList.add('a-slide-right');
+//     }
 // };

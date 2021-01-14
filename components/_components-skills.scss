@@ -133,42 +133,35 @@
 
     &__feedback {
         color: white;
-        width: 100vw;
+        position: relative;
         padding: 5% 10%;
         margin-bottom: 88px;
         margin-top: 60px;
         background-color: $primary-300;
-        position: relative;
         overflow: hidden;
         height: 288px;
+        display: flex;
+        flex-direction: row;
 
         &-move {
             display: flex;
             flex-direction: row;
             flex-flow: nowrap;
-            justify-content: space-between;
+            overflow: hidden;
         }
 
         &-nav {
-            width: 100vw;
-            min-width: 100%;
-            margin: 0 40px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            flex-basis: 100%;
             display: grid;
             grid-gap: 30px;
-            grid-template-columns: min-content 1fr min-content;
+            grid-template-columns: min-content 1fr;
             grid-template-rows: min-content 1fr;
             grid-template-areas: 
-                                'feed-image feed-heading feed-slider'
-                                'feed-text feed-text feed-slider';
+                                'feed-image feed-heading'
+                                'feed-image feed-text';
             
-            @include for-tablet-landscape-up {
-                grid-template-columns: 20% 1fr;
-                grid-template-rows: min-content 1fr;
-                grid-template-areas: 
-                                    'feed-image feed-heading'
-                                    'feed-image feed-text';
-            }
-
             &--image {
                 border-radius: 50%;
                 width: 140px;
@@ -178,7 +171,6 @@
                 grid-area: feed-image;
                 align-self: center;
                 justify-self: center;
-    
             }
     
             &--heading {
